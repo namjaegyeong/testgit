@@ -1,0 +1,15 @@
+alp = {}
+infilename = input("파일 이름을 입력하시오:")
+infile = open(infilename,"r")
+rline = infile.read()
+
+for line in rline:
+	for ch in line:
+		if ch in alp:
+			alp[ch] += 1
+		else:
+			alp[ch] = 1
+
+print(alp)
+
+infile.close()
